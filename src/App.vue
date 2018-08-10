@@ -1,18 +1,22 @@
 <template>
   <div id="app">
     <div class ="player-background">
-      <playlist></playlist>
+      <playlist v-if="!isPlayerActive" class="player-window"></playlist>
+      <div v-else class="player-window"> placeholder </div>
     </div>
   </div>
 </template>
 
 <script>
-import Playlist from "./components/Playlist.vue";
+import Playlist from './components/Playlist.vue'
+import {mapState} from "vuex";
 export default {
-  components:{
-    Playlist,
-  }
-  
+  components: {
+    Playlist
+  },
+  computed : mapState([
+      "isPlayerActive"
+  ]),
 }
 </script>
 
@@ -28,5 +32,15 @@ export default {
 body{
   margin:0px;
   padding:0px;
+}
+.player-window{
+    padding-top:40px;
+    padding-left:40px;
+    padding-right:40px;
+    border-radius:7%;
+    background-color: #eeeff5;
+    height:100%;
+    margin-bottom:0px;
+    box-shadow: 1px 1px;
 }
 </style>

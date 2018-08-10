@@ -1,39 +1,31 @@
 <template>
-<div class = "playlist-window">
+<div>
     <div class="wrapper" >
-      <div> <font-awesome-icon icon ="arrow-left" class="icon"/></div>  <div class="playlist-header"><h1>Playlist</h1></div><div></div>
+      <div> <font-awesome-icon icon ="arrow-left" class="icon" @click="changePlayerState()"/></div>  <div class="playlist-header"><h1>Playlist</h1></div><div></div>
     </div>
-    <song :song = "song"></song>
+    <song v-for = " song in songs"  :song = "song"></song>
     </div>
 </template>
 <script>
-import Song from "./Song.vue"
-    export default {
-        components:{
-            Song
-        }
-    }
+import Song from './Song.vue'
+import {mapState , mapActions} from "vuex";
+export default {
+  components: {
+    Song
+  },
+  computed : mapState([
+      "songs"
+  ]),
+  methods: mapActions([
+      "changePlayerState"
+  ])
+}
 </script>
 <style scoped>
-.playlist-window{
-    padding-top:40px;
-    padding-left:40px;
-    padding-right:40px;
-    border-radius:7%;
-    background-color: #eeeff5;
-    height:100%;
-    margin-bottom:0px;
-    box-shadow: 1px 1px;
-}
 .wrapper{
     display:flex;
     flex-direction: row;
     align-items:base-line;
-  
-   
- 
- 
-   
 
 }
 h1{
