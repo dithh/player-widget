@@ -1,5 +1,6 @@
 <template>
     <div class = "playlist-window">
+      <div> <font-awesome-icon icon ="arrow-left" class="icon"/></div>  <div class="playlist-header"><h1>Playlist</h1></div><div></div>
        
     </div>
 </template>
@@ -10,9 +11,29 @@
 </script>
 <style scoped>
 .playlist-window{
+    padding-top:40px;
+    padding-left:40px;
+    padding-right:40px;
+    display:flex;
+    flex-direction: row;
+    align-items:base;
     border-radius:7%;
     background-color: #eeeff5;
-    height:480px;
+    height:100%;
     margin-bottom:0px;
+    box-shadow: 1px 1px;
+}
+h1{
+    display:inline;
+    margin-left:65px;
+    font-size:14px;
+}
+.icon{
+    border:0;
+    background:white;
+    border-radius:100%;
+    text-align:center;
+    padding:20px 20px;
+    font-size:12px;
 }
 </style>
