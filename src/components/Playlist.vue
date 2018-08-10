@@ -1,12 +1,17 @@
 <template>
-    <div class = "playlist-window">
+<div class = "playlist-window">
+    <div class="wrapper" >
       <div> <font-awesome-icon icon ="arrow-left" class="icon"/></div>  <div class="playlist-header"><h1>Playlist</h1></div><div></div>
-       
+    </div>
+    <song :song = "song"></song>
     </div>
 </template>
 <script>
+import Song from "./Song.vue"
     export default {
-
+        components:{
+            Song
+        }
     }
 </script>
 <style scoped>
@@ -14,14 +19,22 @@
     padding-top:40px;
     padding-left:40px;
     padding-right:40px;
-    display:flex;
-    flex-direction: row;
-    align-items:base;
     border-radius:7%;
     background-color: #eeeff5;
     height:100%;
     margin-bottom:0px;
     box-shadow: 1px 1px;
+}
+.wrapper{
+    display:flex;
+    flex-direction: row;
+    align-items:base-line;
+  
+   
+ 
+ 
+   
+
 }
 h1{
     display:inline;
