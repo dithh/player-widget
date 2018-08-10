@@ -1,28 +1,32 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class ="player-background">
+      <playlist></playlist>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Playlist from "./components/Playlist.vue";
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  components:{
+    Playlist,
   }
+  
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.player-background{
+  height:600px;
+  width:415px;
+  margin: 0 auto;
+  padding :  60px 30px;
+  background:url("assets/background.jpg") no-repeat;
+  background-size:cover;
+}
+body{
+  margin:0px;
+  padding:0px;
 }
 </style>
