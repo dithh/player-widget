@@ -8,7 +8,7 @@ new Vuex.Store({
         songs: [{
             tittle: "Chciałbym",
             author: "Peja",
-            length: "3.17"
+                        length: "3.17"
         }]
     }
 })
