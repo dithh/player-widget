@@ -11,16 +11,16 @@
             <div class = "item-3"><font-awesome-icon icon ="bars" class ="icon" @click = "changePlayerState()"/></div>
         </div>
         <div class="song-details">
-            <p class="song-author">{{songs[0].author}}</p>
-            <p class = "song-tittle">{{songs[0].tittle}}</p>
+            <p class="song-author">{{songs[activeSongIndex].author}}</p>
+            <p class = "song-tittle">{{songs[activeSongIndex].tittle}}</p>
         </div>
         <div class="progress-bar">
         <span class ="progress-bar-full"></span><span class = "progress-bar-empty"></span>
         </div>
         <div class="controls">
-            <font-awesome-icon icon ="history" class="icon"/> 
+            <font-awesome-icon icon ="history" class="icon" @click="changeSong(-1)"/> 
              <font-awesome-icon icon ="random" class="icon" />
-              <font-awesome-icon icon ="redo" class="icon" />
+              <font-awesome-icon icon ="redo" class="icon" @click="changeSong(1)" />
         </div>
     </div>
 </template>
@@ -28,10 +28,12 @@
 import {mapActions , mapState} from "vuex";
 export default {
 methods: mapActions([
-    'changePlayerState'
+    'changePlayerState',
+    "changeSong"
   ]),
   computed: mapState([
-    'songs'
+    'songs',
+    'activeSongIndex'
   ]),
 }
     

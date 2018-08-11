@@ -18,6 +18,8 @@ export default {
     display:block;
     margin-top:24px auto;
     overflow-y:auto;
+    cursor:pointer;
+
 }
 .song-tittle{
   color:#484982;

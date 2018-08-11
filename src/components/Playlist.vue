@@ -7,7 +7,7 @@
         <h1>Playlist</h1>
       <div></div>
     </div>
-    <song v-for=" song in songs" :song="song"></song>
+    <song v-for=" (song,index) in songs" :song="song" @click.native = "playSong(index)"></song>
     </div>
 </template>
 <script>
@@ -20,9 +20,15 @@ export default {
   computed: mapState([
     'songs'
   ]),
-  methods: mapActions([
-    'changePlayerState'
-  ])
+  methods: {...mapActions([
+    'changePlayerState',
+    "selectActiveSongId"
+  ]),
+  playSong:function(index){
+    this.selectActiveSongId(index);
+    this.changePlayerState();
+  }
+  }
 }
 </script>
 <style scoped>
