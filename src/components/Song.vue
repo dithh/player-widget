@@ -17,6 +17,7 @@ export default {
     width:100%;
     display:block;
     margin-top:24px auto;
+    overflow-y:auto;
 }
 .song-tittle{
   color:#484982;

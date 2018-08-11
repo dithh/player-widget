@@ -45,7 +45,7 @@ body{
     margin-bottom:0px;
     box-shadow: 1px 1px;
     overflow-y:auto;
-    z-index:1;
+
 }
 .player-window{
     border-radius:7%;
@@ -53,8 +53,7 @@ body{
     height:100%;
     margin-bottom:0px;
     box-shadow: 1px 1px;
-    overflow-y:auto;
-    z-index:1;
+    overflow:none;
     position:relative;
 }
 </style>

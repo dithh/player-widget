@@ -18,8 +18,9 @@
         <span class ="progress-bar-full"></span><span class = "progress-bar-empty"></span>
         </div>
         <div class="controls">
-            <h1>Kurwy</h1>
-
+            <font-awesome-icon icon ="history" class="icon"/> 
+             <font-awesome-icon icon ="random" class="icon" />
+              <font-awesome-icon icon ="redo" class="icon" />
         </div>
     </div>
 </template>
@@ -61,29 +62,31 @@ p{
     display:flex;
     justify-content:space-around;
     align-content: space-around;
-    position:relative;
+    position:absolute;
     background-color:#7278af;
     height:65px;
     top:0;
     opacity:0.65;
+    width:100%
 }
     .icon{
 margin-left: 10px;
 margin-top:25px;
 }
 .song-details{
-    position:relative;
+    position:absolute;
+    width: 100%;
     background-color:#7278af;
     height:65px;
     opacity:0.65;
-    top:210px;
+    top:275px;
 }
 .progress-bar-full{
     position:relative;
     height:10px;
     width:30%;
     background-color:white;
-    top:210px;
+    top:340px;
 }
 .progress-bar-empty{
      position:relative;
@@ -92,13 +95,27 @@ margin-top:25px;
     width:70%;
     background-color:#ed5e74;
     z-index:10px;
-    top:210px;
+    top:340px;
 }
 .progress-bar{
     display:flex;
 }
 .controls{
-    
+    position:relative;
+    background-color: #eeeff5;
+    top:340px;
+    margin : 0px 20px;
+    height:250px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.controls :nth-child(odd){
+    font-size:12px;
+}
+.icons{
+    padding:20px;
+    background-color: #7278af;
 }
 </style>
 
