@@ -1,13 +1,13 @@
 <template>
-<div>
+<div class= "songs-section">
     <div class="wrapper">
       <div>
-        <font-awesome-icon icon="arrow-left" class="icon" @click="changePlayerState()" />
+        <font-awesome-icon icon="arrow-left" class="icon back-button" @click="changePlayerState()" />
       </div>
         <h1>Playlist</h1>
       <div></div>
     </div>
-    <song v-for=" (song,index) in songs" :song="song" @click.native = "playSong(index)"></song>
+     <div> <song v-for=" (song,index) in songs" :song="song"  :index="index"></song></div>
     </div>
 </template>
 <script>
@@ -31,14 +31,12 @@ export default {
   }
 }
 </script>
-<style scoped>
-.songs-wrapper{
-  height:100%;
-}
+<style>
 .wrapper{
     display:flex;
     flex-direction: row;
     align-items: flex-start;
+    
 
 }
 h1{
@@ -47,12 +45,17 @@ h1{
     font-size:14px;
     text-align: center;
     color:#484982;}
-.icon{
+.back-button{
     border:0;
     background:white;
     border-radius:100%;
     text-align:center;
-    padding:20px 20px;
+    padding:10px 10px;
     font-size:12px;
+}
+.songs-section{
+  width:95%;
+  margin:auto;
+
 }
 </style>
