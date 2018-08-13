@@ -23,36 +23,36 @@
         <div class = "controls">
             <font-awesome-icon icon="share-alt" class="icon share-icon"/>
             <font-awesome-icon icon="step-backward" class="icon" color="white" @click="changeSong(-1)" />
-            
+
                 <font-awesome-icon :icon="playPauseIcon" class="icon icon-middle play-button" color="white" @click="isPlaying =!isPlaying" />
                 <font-awesome-icon icon="step-forward" class="icon" color="white"  @click="changeSong(1)"/>
                 <font-awesome-icon icon="heart" class="icon heart-icon" color="red"/>
-                
+
         </div>
     </div>
 </template>
 <script>
-import {mapActions , mapState, mapMutations} from "vuex";
+import {mapActions, mapState} from 'vuex'
 export default {
-    data :function(){
-        return {isPlaying :false
-        }
-    },
-methods: mapActions([
+  data: function () {
+    return {isPlaying: false
+    }
+  },
+  methods: mapActions([
     'changePlayerState',
-    "changeSong"
+    'changeSong'
   ]),
   computed: {...mapState([
     'songs',
     'activeSongIndex'
   ]),
-  playPauseIcon:function(){
-      if(this.isPlaying) return "pause"
-      else return "play";
+  playPauseIcon: function () {
+    if (this.isPlaying) return 'pause'
+    else return 'play'
   }
-  },
+  }
 }
-    
+
 </script>
 <style scoped>
 p{

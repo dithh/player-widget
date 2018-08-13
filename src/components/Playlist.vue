@@ -7,7 +7,7 @@
         <h1>Playlist</h1>
       <div></div>
     </div>
-     <div> <song v-for=" (song,index) in songs" :song="song"  :index="index"></song></div>
+     <div> <song v-for=" (song,index) in songs" :song="song"  :index="index" :key = "index"></song></div>
     </div>
 </template>
 <script>
@@ -22,11 +22,11 @@ export default {
   ]),
   methods: {...mapActions([
     'changePlayerState',
-    "selectActiveSongId"
+    'selectActiveSongId'
   ]),
-  playSong:function(index){
-    this.selectActiveSongId(index);
-    this.changePlayerState();
+  playSong: function (index) {
+    this.selectActiveSongId(index)
+    this.changePlayerState()
   }
   }
 }
@@ -36,7 +36,6 @@ export default {
     display:flex;
     flex-direction: row;
     align-items: flex-start;
-    
 
 }
 h1{
@@ -55,7 +54,7 @@ h1{
 }
 .songs-section{
   margin:auto;
-   width: 95%;
+  width: 95%;
   overflow: auto;
   max-height:100%;
 }

@@ -1,27 +1,27 @@
 <template>
 <div class = "song-block">
       <p class = "song-details"> {{song.length}}  | {{song.author}} </p>
-      <div class ="wrapper"> 
+      <div class ="wrapper">
      <span class="song-tittle" @click = "playSong(index)"> <p class = "song-tittle">{{index +1 }}.{{song.tittle}}</p></span><div> </div><div> <font-awesome-icon icon ="share-alt" class="icon" /> <font-awesome-icon icon ="heart" class="icon" color="red"/></div>
       </div>
       <hr v-if = "index < songs.length -1">
     </div>
 </template>
 <script>
-import {mapState,mapActions} from "vuex"
+import {mapState, mapActions} from 'vuex'
 export default {
-  props: ['song'
-  ,"index"],
-   computed: mapState([
+  props: ['song',
+    'index'],
+  computed: mapState([
     'songs'
   ]),
-   methods: {...mapActions([
+  methods: {...mapActions([
     'changePlayerState',
-    "selectActiveSongId"
+    'selectActiveSongId'
   ]),
-  playSong:function(index){
-    this.selectActiveSongId(index);
-    this.changePlayerState();
+  playSong: function (index) {
+    this.selectActiveSongId(index)
+    this.changePlayerState()
   }
   }
 }
