@@ -1,5 +1,6 @@
 # player-widget
-The project is build using vue-cli.
+Project made as the recruitment task for front-end developer position.
+
 ## Project setup
 ```
 npm install
