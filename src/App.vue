@@ -23,6 +23,7 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
 .player-background{
   height:600px;
   width:415px;
@@ -40,6 +41,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#949ed1', end
 margin:0;
 padding:0;
 height:100%;
+font-family: 'Roboto Slab', serif
 }
 .playlist{
     padding-left:40px;
@@ -54,6 +56,7 @@ height:100%;
    overflow:hidden;
     position:relative;
     height:100%;
+    color:white;
 }
 .window{
  border-radius:7%;
