@@ -1,7 +1,7 @@
 <template>
 <div class = "song-block">
       <p class = "song-details"> {{song.length}}  | {{song.author}} </p>
-      <div class ="wrapper">
+      <div class ="song-wrapper">
      <span class="song-tittle" @click = "playSong(index)"> <p class = "song-tittle">{{index +1 }}.{{song.tittle}}</p></span><div> </div><div> <font-awesome-icon icon ="share-alt" class="icon" /> <font-awesome-icon icon ="heart" class="icon" color="red"/></div>
       </div>
       <hr v-if = "index < songs.length -1">
@@ -46,7 +46,7 @@ export default {
   margin-bottom:0px;
   padding-bottom:0px;
 }
-.wrapper{
+.song-wrapper{
   display:flex;
   flex-direction: row;
   justify-content: space-between;

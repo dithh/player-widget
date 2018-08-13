@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="cover">
+        <div class="cover" :style="{ 'background-image': 'url(' + coverImage + ')' }">
             <div class="cover-header">
                 <font-awesome-icon icon="history" class="icon" />
                 <font-awesome-icon icon="random" class="icon icon-middle" />
@@ -21,7 +21,7 @@
 <div class="progress-bar-empty"> <font-awesome-icon icon="volume-up" class="icon icon-middle" color="black"/></div>
         </div>
         <div class = "controls">
-            <font-awesome-icon icon="share-alt" class="icon share-icon"/>
+            <font-awesome-icon icon="share-alt" class="icon share-icon" color="#484982"/>
             <font-awesome-icon icon="step-backward" class="icon" color="white" @click="changeSong(-1)" />
 
                 <font-awesome-icon :icon="playPauseIcon" class="icon icon-middle play-button" color="white" @click="isPlaying =!isPlaying" />
@@ -35,7 +35,8 @@
 import {mapActions, mapState} from 'vuex'
 export default {
   data: function () {
-    return {isPlaying: false
+    return {
+      isPlaying: false
     }
   },
   methods: mapActions([
@@ -49,6 +50,9 @@ export default {
   playPauseIcon: function () {
     if (this.isPlaying) return 'pause'
     else return 'play'
+  },
+  coverImage: function () {
+    return this.songs[this.activeSongIndex].cover
   }
   }
 }
@@ -70,7 +74,6 @@ p{
 }
 .cover{
     position: relative;
-    background:url("https://1.allegroimg.com/s512/01a82b/d0324c3948c39bf3b7067744fcd1");
     width:100%;
     height:340px;
     margin:0px;
@@ -78,11 +81,12 @@ p{
     border-top-left-radius: 7%;
     border-top-right-radius:7%;
     overflow:hidden;
+    background-size:cover;
 }
 .cover-header{
     position:absolute;
     background-color:#7278af;
-    opacity:0.65;
+    opacity:0.75;
     width:100%;
     text-align:center;
     padding-top:25px;
@@ -104,7 +108,7 @@ cursor:pointer;
     width: 100%;
     background-color:#7278af;
     height:65px;
-    opacity:0.65;
+    opacity:0.75;
     bottom:0px;
 }
 .progress-bar-full{
