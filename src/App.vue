@@ -49,17 +49,19 @@ height:100%;
     background-color: #eeeff5;
     margin-bottom:0px;
     box-shadow: 1px 1px;
+    height:100%;
 }
 .player{
    overflow:hidden;
     position:relative;
+    height:100%;
 }
 .window{
  border-radius:7%;
     background-color: #eeeff5;
     margin-bottom:0px;
     box-shadow: 1px 1px;
-    height:550px;
+    height:600px;
 
 }
 </style>
