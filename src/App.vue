@@ -39,6 +39,7 @@ background: linear-gradient(to bottom, rgba(148,158,209,1) 0%,rgba(138,143,199,1
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#949ed1', endColorstr='#3b345e',GradientType=0 ); /* IE6-9 */
 margin:0;
 padding:0;
+height:100%;
 }
 .playlist{
    padding-top:40px;
@@ -48,7 +49,6 @@ padding:0;
     background-color: #eeeff5;
     margin-bottom:0px;
     box-shadow: 1px 1px;
-     overflow:auto;
 }
 .player{
    overflow:hidden;

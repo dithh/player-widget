@@ -54,8 +54,9 @@ h1{
     font-size:12px;
 }
 .songs-section{
-  width:95%;
   margin:auto;
-
+   width: 95%;
+  overflow: auto;
+  max-height:100%;
 }
 </style>

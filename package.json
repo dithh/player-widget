@@ -5,7 +5,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "node ./node_modules/vue-gh-pages/index.js"
+
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.2",
@@ -21,6 +23,8 @@
     "@vue/cli-plugin-eslint": "^3.0.0-rc.12",
     "@vue/cli-service": "^3.0.0-rc.12",
     "@vue/eslint-config-standard": "^3.0.0",
+    "vue-gh-pages": "^1.18.2",
     "vue-template-compiler": "^2.5.17"
-  }
+  },
+  "homepage": "https://github.com/dithh/player-widget"
 }
